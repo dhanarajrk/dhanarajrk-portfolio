@@ -8,4 +8,5 @@ export default defineConfig({
   esbuild: {
     loader: 'jsx', // Treat .js files as JSX
   },
+  base: '/dhanarajrk-portfolio/',
 })

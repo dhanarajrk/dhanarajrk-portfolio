@@ -9,7 +9,7 @@ import FluidCursor from './components/FluidCursor'; // 💧 Import FluidCursor
 
 function App() {
   return (
-    <div className="bg-white text-black relative">
+    <div className="bg-dark text-black relative">
       <FluidCursor /> {/* 💧 Add FluidCursor here */}
 
       {/* Header Section */}
@@ -19,7 +19,7 @@ function App() {
 
       {/* About Section */}
       <Section id="about">
-        <About />
+        <About/>
       </Section>
 
       {/* Experience Section */}

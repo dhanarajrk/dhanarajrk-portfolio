@@ -4,12 +4,11 @@ import { skills } from '../data/skills';
 const Skills = () => {
   return (
     <motion.section
-      id="skills"
-      initial={{ opacity: 0, y: 50, scale: 0.95 }}
-      whileInView={{ opacity: 1, y: 0, scale: 1 }}
-      transition={{ duration: 1.2, ease: 'easeInOut' }}
-      viewport={{ once: false, amount: 0.5 }}
-      className="h-screen flex items-center justify-center" // No background
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="min-h-screen flex items-center justify-center"
     >
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-12">Skills</h2>
@@ -21,9 +20,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: 'easeInOut', delay: index * 0.1 }} // Staggered delay
               viewport={{ once: false, amount: 0.5 }}
-              className="flex flex-col items-center justify-center p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-all duration-300 transform hover:scale-103" // Added hover zoom effect
+              className="group flex flex-col items-center justify-center p-4 transition-all duration-200 transform hover:-translate-y-2 hover:scale-110" // Added hover zoom effect
             >
-              <div className="text-4xl mb-2 text-gray-700">{skill.icon}</div>
+              <div className="text-5xl mb-2 text-gray-700 drop-shadow-lg transition-all duration-200 group-hover:drop-shadow-2xl">{skill.icon}</div>
               <p className="text-lg text-gray-700 text-center">{skill.name}</p>
             </motion.div>
           ))}
